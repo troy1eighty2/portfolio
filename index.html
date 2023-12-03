@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="author" content="Troy Tran"/>
+        <meta name="description" content="Troy Tran's portfolio">
+        <title>Troy Tran</title>
+        <link rel="icon" href="images/computer.webp">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+        <!-- "defer" makes browser finishes parsing the html before moving onto js -->
+        <script src="https://kit.fontawesome.com/bb71581ca3.js" crossorigin="anonymous"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <!-- icon imported from font awesome kit -->
+                    <a href="#"><i class="fa-solid fa-code"></i></a>
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">projects</a></li>
+                        <li><a href="#">contact</a></li>
+                        <li><a href="#">exposition</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1 class="typewriter">Hello!</h1>
+                    <p>I'm <strong>Troy</strong>, a <strong>third-year undergraduate student</strong><br>studying computer science. <br>My passion is making cool stuff!</p>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <h1 class="subtitle">about</h1>
+                        <p>Passionate and forward-thinking student with a keen interest in exploring cutting-edge technologies, 
+                            continuous learning, and a dedication to optimizing systems. Fueled by a genuine passion for algorithms, 
+                            I am driven to understand how software and code can be harnessed to solve complex problems. My portfolio 
+                            reflects a commitment to innovation, showcasing projects that highlight my curiosity and enthusiasm for 
+                            leveraging technology to create efficient and impactful solutions.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('languages')">Languages</p>
+                            <p class="tab-links" onclick="opentab('frameworks')">Frameworks</p>
+                            <p class="tab-links" onclick="opentab('technologies')">Technologies</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="languages">
+                            <ul>
+                                <li><i class="fa-brands fa-python"></i></li>
+                                <li><i class="fa-solid fa-c"></i></li>
+                                <li><i class="fa-brands fa-java"></i></li>
+                                <li><i class="fa-brands fa-html5"></i></li>
+                                <li><i class="fa-brands fa-css3-alt"></i></li>
+                                <li><i class="fa-brands fa-js"></i></li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="frameworks">
+                            <ul>
+                                <li><i class="fa-brands fa-react"></i></li>
+                                <li><i class="fa-solid fa-flask"></i></li>
+                                <li><i class="fa-brands fa-node"></i></li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="technologies">
+                            <ul>
+                                <li><i class="fa-brands fa-github"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-col2">
+                        <img src="images/800px-JJASBR_Weather_Artwork.png" alt="" >
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="projects">
+            <div class="container">
+                <h1 class="subtitle">projects</h1>
+                <div class="portfolio"</div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontents = document.getElementsByClassName("tab-contents")
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tablink of tabcontents){
+                    tablink.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+
+
+
+        <hr>
+        <footer>
+            <div class="container">
+                <div class="footer-row">
+                    <p>Troy Tran 2023</p>
+                    <ul>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+    </body>
+</html>

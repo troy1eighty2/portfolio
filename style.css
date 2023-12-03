@@ -1,0 +1,223 @@
+/* css reset to normalize different default browser settings to a base */
+
+/* margin */
+/* border */
+/* padding */
+/* content */
+*{
+    /* visualize the borders */
+    border-style: solid;
+    border-width: 1px;
+    border-color: hotpink;
+
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Cascadia Code', sans-serif;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    /* background is a general term, it lets you set multiple background properties */
+    background: #282c34;
+    /* content of body will be white */
+    color: lightgray;
+}
+#header{
+    width: 100%;
+    /* vh = viewport height */
+    height: 97vh;
+    background-image: url(images/800px-JJASBR_Weather_Artwork.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 80% 80%;
+}
+.container{
+    /* top right bottom left */
+    padding: 10px 10% 10px 10%;
+}
+nav{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    /* makes newline when vp gets too small */
+    flex-wrap: wrap;
+}
+nav i{
+    color: lightgray;
+    font-size: 40px;
+}
+nav ul li{
+    display: inline-block;
+}
+/* relative position anchoring for the absolute position */
+nav ul li a{
+    color: lightgray;
+    font-size: 20px;
+    position: relative;
+}
+/* underline effect when hovered */
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover{
+    font-weight: bold;
+    color: white;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav i:hover{
+    color: white;
+    transform: translateY(-5px)
+}
+
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    margin-bottom: 30px;
+    
+}
+.header-text p{
+    line-height: 2;
+}
+.header-text strong{
+    color: white;
+    
+}
+/* ------------------about------------------ */
+#about{
+    color: lightgray;
+    height: 97vh;
+}
+div img{
+    width: 400px;
+    border-radius: 15%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+flex-wrap: wrap;
+}
+.about-col1{
+    display: block;
+    width: 60%;
+}
+.about-col2{
+    color: white;
+}
+.subtitle{
+    font-size: 30px;
+    font-weight: 600px;
+    margin-bottom: 20px;
+}
+.about-col1 p{
+    line-height: 3;
+}
+.tab-titles{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.tab-links{
+    /* changes cursor to pointer when hovering over it */
+    cursor: pointer;
+    position: relative;
+}
+/* underlining animation */
+.tab-links::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    transition: 0.5s;
+}
+.tab-links:hover::after{
+    width: 100%;
+}
+.tab-links:hover{
+    font-weight: bold;
+    color: white;
+}
+.tab-links.active-link{
+    color: white;
+    font-weight: bold;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+/* tab content animation */
+.tab-contents ul li{
+    margin: 10px 10px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.about-col1 .tab-contents.active-tab ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1 .tab-contents.active-tab ul li{
+    font-size: 100px;
+}
+/* ------------------about------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------footer------------------ */
+footer .container{
+    margin: 10px;
+}
+footer .footer-row{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+    display: flex;
+}
+/* ------------------footer------------------ */
