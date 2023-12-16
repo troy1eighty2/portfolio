@@ -20,10 +20,10 @@
                     <!-- icon imported from font awesome kit -->
                     <a href="#"><i class="fa-solid fa-code"></i></a>
                     <ul>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">projects</a></li>
-                        <li><a href="#">contact</a></li>
-                        <li><a href="#">exposition</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#exposition">exposition</a></li>
+                        <li><a href="#contact">contact</a></li>
                     </ul>
                 </nav>
                 <div class="header-text">
@@ -37,6 +37,7 @@
                 <div class="row">
                     <div class="about-col1">
                         <h1 class="subtitle">about</h1>
+                        <hr>
                         <p>Passionate and forward-thinking student with a keen interest in exploring cutting-edge technologies, 
                             continuous learning, and a dedication to optimizing systems. Fueled by a genuine passion for algorithms, 
                             I am driven to understand how software and code can be harnessed to solve complex problems. My portfolio 
@@ -80,29 +81,73 @@
                 
             </div>
         </div>
-        <div class="projects">
+        <div id="projects">
             <div class="container">
                 <h1 class="subtitle">projects</h1>
-                <div class="portfolio"</div>
+                <hr>
+                <div class="project-list">
+                    <a class="project" href="">
+                        <img src="images/me.jpg" alt="">
+                        <div class="layer">
+                            <h3>Project Name</h3>
+                            <p>project descriptionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa nah but real tho this is a test to see if things will wrap properly or give me cancer</p>
+                        </div>
+                    </a>
+                    <a class="project" href="">
+                        <img src="images/me.jpg" alt="">
+                        <div class="layer">
+                            <h3>Project Name</h3>
+                            <p>project description</p>
+                        </div>
+                    </a>
+                    <a class="project" href="">
+                        <img src="images/me.jpg" alt="">
+                        <div class="layer">
+                            <h3>Project Name</h3>
+                            <p>project description</p>
+                        </div>
+                    </a>
+                    <a class="project" href="">
+                        <img src="images/me.jpg" alt="">
+                        <div class="layer">
+                            <h3>Project Name</h3>
+                            <p>project description</p>
+                        </div>
+                    </a>
+
+                </div>
             </div>
         </div>
-        <script>
-            var tablinks = document.getElementsByClassName("tab-links")
-            var tabcontents = document.getElementsByClassName("tab-contents")
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link");
-                }
-                for(tablink of tabcontents){
-                    tablink.classList.remove("active-tab");
-                }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
-            }
-        </script>
+        <div id="exposition">
+            <div class="container">
+                <h1 class="subtitle">exposition</h1>
+                <hr>
 
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <h1 class="subtitle">contact</h1>
+                <hr>
+                <div class="contact-content">
+                    <div class="contact-first-column">
+                        <ul class="contact-list">
+                            <li id="email" onclick="copytoclipboard('email')"><i class="fa-solid fa-envelope"></i> troytran000@gmail.com <p class="cpysuccess">Copied to clipboard</p></li>
+                            <li id="discord" onclick="copytoclipboard('discord')"><i class="fa-brands fa-discord"></i> troy_1eighty2 <p class="cpysuccess">Copied to clipboard</p></li>
+                            <li id="x"><a href="https://twitter.com/t_r_o_y_t_r_a_n" target="_blank"><i class="fa-brands fa-x-twitter"></i> t_r_o_y_t_r_a_n</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-second-column">
+                        
+                        <img src="images/Amy_Winehouse_-_Frank.png" alt="">
+                        <img class="metaphoricalmusic" src="images/MetaphoricalMusic.jpg" alt="">
+                        <img src="images/My_Bloody_Valentine_-_Loveless.png" alt="">
+                    </div>
+                </div>
+                
 
-
+            </div>
+        </div>
 
         <hr>
         <footer>
