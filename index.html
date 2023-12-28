@@ -26,9 +26,18 @@
                         <li><a href="#contact">contact</a></li>
                     </ul>
                 </nav>
+                <hr>
                 <div class="header-text">
                     <h1 class="typewriter">Hello!</h1>
                     <p>I'm <strong>Troy</strong>, a <strong>third-year undergraduate student</strong><br>studying computer science. <br>My passion is making cool stuff!</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="links-bar">
+                    <a href="https://open.spotify.com/user/goodnamesweretaken?si=23c5e917a05c42fd" target="_blank"><img src="icons/icons8-spotify-144.png" alt=""></a>
+                    <a href="https://github.com/troy1eighty2" target="_blank"><img src="icons/icons8-github-120.png"  alt=""></a>
+                    <a href="https://www.depop.com/troy1eighty2/" target="_blank"><img src="icons/icons8-depop-144.png" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCPRbCvR7hxkyAxdYu-jBk9g" target="_blank"><img src="icons/icons8-youtube-144.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -38,11 +47,13 @@
                     <div class="about-col1">
                         <h1 class="subtitle">about</h1>
                         <hr>
-                        <p>Passionate and forward-thinking student with a keen interest in exploring cutting-edge technologies, 
-                            continuous learning, and a dedication to optimizing systems. Fueled by a genuine passion for algorithms, 
-                            I am driven to understand how software and code can be harnessed to solve complex problems. My portfolio 
-                            reflects a commitment to innovation, showcasing projects that highlight my curiosity and enthusiasm for 
-                            leveraging technology to create efficient and impactful solutions.</p>
+                        <p class="about-text"> I'm passionate about exploring cutting-edge technologies 
+                            and leveraging code for <strong>efficient solutions</strong>. As an engineer, I prioritize 
+                            <strong>careful planning, thoughtful design, and rigorous testing</strong>. I believe in 
+                            <strong>continuous optimization and maintenence</strong> to create lasting, impactful solutions. 
+                            Personally, I value <strong>open communication and inclusive spaces where 
+                            diverse ideas are welcome</strong>. I believe in understanding different perspectives, 
+                            honesty, giving 100% effort to pursue dreams while uplifting others to do the same along the way.</p>
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('languages')">Languages</p>
                             <p class="tab-links" onclick="opentab('frameworks')">Frameworks</p>
@@ -50,26 +61,36 @@
                         </div>
                         <div class="tab-contents active-tab" id="languages">
                             <ul>
-                                <li><i class="fa-brands fa-python"></i></li>
-                                <li><i class="fa-solid fa-c"></i></li>
-                                <li><i class="fa-brands fa-java"></i></li>
-                                <li><i class="fa-brands fa-html5"></i></li>
-                                <li><i class="fa-brands fa-css3-alt"></i></li>
-                                <li><i class="fa-brands fa-js"></i></li>
+                                <li><img src="icons/icons8-python-144.png" alt=""></li>
+                                <li><img src="icons/icons8-c-144.png" alt=""></li>
+                                <li><img src="icons/icons8-java-144.png" alt=""></li>
+                                <li><img src="icons/icons8-html-144.png" alt=""></li>
+                                <li><img src="icons/icons8-css-144.png" alt=""></li>
+                                <li><img src="icons/icons8-javascript-144.png" alt=""></li>
+                                <li><img src="icons/icons8-sql-60.png" alt=""></li>
+                                <li><img src="icons/icons8-lua-is-a-lightweight,-multi-paradigm-programming-language.-96.png" alt=""></li>
+                                <li><img src="icons/icons8-latex-144.png" alt=""></li>
+                                <li><img src="icons/icons8-dart-144.png" alt=""></li>
 
                             </ul>
                         </div>
                         <div class="tab-contents" id="frameworks">
                             <ul>
-                                <li><i class="fa-brands fa-react"></i></li>
-                                <li><i class="fa-solid fa-flask"></i></li>
-                                <li><i class="fa-brands fa-node"></i></li>
+                                <li><img src="icons/icons8-react-a-javascript-library-for-building-user-interfaces-96.png" alt=""></li>
+                                <li><img src="icons/icons8-flask-150.png" alt=""></li>
+                                <li><img src="icons/icons8-nodejs-144.png" alt=""></li>
+                                <li><img src="icons/icons8-bootstrap-144.png" alt=""></li>
+                                <li><img src="icons/icons8-flutter-144.png" alt=""></li>
 
                             </ul>
                         </div>
                         <div class="tab-contents" id="technologies">
                             <ul>
-                                <li><i class="fa-brands fa-github"></i></li>
+                                <li><img src="icons/icons8-visual-studio-code-144.png" alt=""></li>
+                                <li><img src="icons/icons8-github-120.png" alt=""></li>
+                                <li><img src="icons/icons8-raspberry-pi-144.png" alt=""></li>
+                                <li><img src="icons/icons8-figma-144.png" alt=""></li>
+                                <li><img src="icons/icons8-vim-a-highly-configurable-text-editor-for-efficiently-creating-and-changing-any-kind-of-text-96.png" alt=""></li>
 
                             </ul>
                         </div>
@@ -86,11 +107,11 @@
                 <h1 class="subtitle">projects</h1>
                 <hr>
                 <div class="project-list">
-                    <a class="project" href="">
-                        <img src="images/me.jpg" alt="">
+                    <a class="project" href="https://github.com/Dannyle1237/MedicalAnalysis" target="_blank">
+                        <img src="images/sasemdexample.png" alt="">
                         <div class="layer">
-                            <h3>Project Name</h3>
-                            <p>project descriptionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa nah but real tho this is a test to see if things will wrap properly or give me cancer</p>
+                            <h3>SASEMD</h3>
+                            <p>Web application that identifies diseases based on user-inputted symptoms.</p>
                         </div>
                     </a>
                     <a class="project" href="">
@@ -135,10 +156,16 @@
                             <li id="email" onclick="copytoclipboard('email')"><i class="fa-solid fa-envelope"></i> troytran000@gmail.com <p class="cpysuccess">Copied to clipboard</p></li>
                             <li id="discord" onclick="copytoclipboard('discord')"><i class="fa-brands fa-discord"></i> troy_1eighty2 <p class="cpysuccess">Copied to clipboard</p></li>
                             <li id="x"><a href="https://twitter.com/t_r_o_y_t_r_a_n" target="_blank"><i class="fa-brands fa-x-twitter"></i> t_r_o_y_t_r_a_n</a></li>
+                            
                         </ul>
+                        <div class="credits">
+                            <p>cascadia code font from <a href="https://www.cdnfonts.com" target="_blank">cdnfonts</a></p>
+                            <p>album covers from <a href="https://www.wikipedia.org/wiki" target="_blank">wikipedia</a></p>
+                            <p>icons from <a href="https://fontawesome.com/" target="_blank">font awesome</a></p>
+                            <p>icons from <a href="https://icons8.com/ " target="_blank">icons8</a></p>
+                        </div>
                     </div>
                     <div class="contact-second-column">
-                        
                         <img src="images/Amy_Winehouse_-_Frank.png" alt="">
                         <img class="metaphoricalmusic" src="images/MetaphoricalMusic.jpg" alt="">
                         <img src="images/My_Bloody_Valentine_-_Loveless.png" alt="">
