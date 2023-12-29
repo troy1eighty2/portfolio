@@ -28,6 +28,24 @@ body{
     /* content of body will be white */
     color: lightgray;
 }
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 1em;
+}
+::-webkit-scrollbar-track{
+    /* hsl (hue saturation light) - a more intuitive way to define rgb */
+    background: #21252b;
+    margin: 5vh;
+    border-radius: 100vh;
+}
+::-webkit-scrollbar-thumb{
+    background: lightgray;
+    border-radius: 100vh;
+    border: .2em solid #21252b;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: white;
+}
 #header{
     width: 100%;
     /* vh = viewport height */
@@ -40,6 +58,16 @@ body{
 .container{
     /* top right bottom left */
     padding: 10px 15% 10px 15%;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
 }
 nav{
     margin: 10px;
@@ -61,6 +89,7 @@ nav ul li a{
     margin: 20px;
     color: lightgray;
     font-size: 20px;
+    border-radius: 100vh;
     position: relative;
 }
 /* underline effect when hovered */
@@ -87,13 +116,29 @@ nav i:hover{
     color: white;
     transform: translateY(-5px)
 }
+.typewriter{
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    animation: typing 1s steps(20, end) forwards, blinking .8s infinite;
+    font-size: 1.6rem;
+    width: 0;
+    position: relative;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 12ch }
+}
+@keyframes blinking {
+    50% { border-style: none; }
+  }
 .header-text{
     margin-top: 15%;
     font-size: 30px;
 }
 .header-text h1{
     margin-bottom: 30px;
-    
+    font-size: 50px;
 }
 .header-text p{
     line-height: 2;
@@ -116,6 +161,8 @@ strong{
 }
 .links-bar a{
     margin-right: 100px;
+    /* transitions go into base element, so any subsequent transform is animated with .5s length of time */
+    transition: .5s;
 }
 .links-bar a:hover{
     transform: scale(1.2);
@@ -210,7 +257,7 @@ strong{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 100px;
-    margin: 30px 0px 10% 0px;
+    margin-top: 30px;
 }
 .project{
     display: inline-flex;
@@ -219,8 +266,9 @@ strong{
     overflow: hidden;
     width: 400px;
     height: 500px;
-    margin: auto;
+    /* margin: 10px; */
     border-radius: 15px;
+    transition: 0.5s;
 }
 .project img{
     width: auto;
@@ -243,14 +291,13 @@ strong{
     background: linear-gradient(rgba(0,0,0,0.6), black);
     border-radius: 15px;
     display: none;
-
 }
 .project:hover .layer{
     display: block;
 }
 .project:hover{
     transform: scale(1.1);
-    transition: 0.5s;
+    
 }
 /* ------------------exposition------------------ */
 #exposition{
@@ -261,7 +308,6 @@ strong{
 /* ------------------contact------------------ */
 #contact{
     width: 100%;
-    
 }
 .contact-content{
     display: flex;
@@ -273,7 +319,7 @@ strong{
 }
 
 .contact-first-column .contact-list li{
-    margin: 10% 30% 10% 10%;
+    margin: 3% 30% 3% 10%;
     padding: 20px;
     border-radius: 15px;
     background-color: #21252b;
@@ -313,7 +359,7 @@ strong{
     text-align: right;
 }
 .credits p{
-    margin: 10% 10% 10% 30%;
+    margin: 5% 10% 5% 30%;
 }
 .credits a{
     position: relative;
@@ -341,7 +387,7 @@ strong{
     display: block;
 }
 .contact-second-column img{
-    width: 300px;
+    width: 250px;
     margin: 2%;
 }
 .contact-second-column .metaphoricalmusic{
