@@ -202,6 +202,7 @@ strong{
 }
 .links-bar a:hover{
     transform: scale(1.2);
+    transition-delay: 0ms;
 }
 /* ------------------about------------------ */
 #about{
