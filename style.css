@@ -49,7 +49,7 @@ body{
 #header{
     width: 100%;
     /* vh = viewport height */
-    height: 97vh;
+    height: 100vh;
     background-image: url(images/800px-JJASBR_Weather_Artwork.png);
     background-repeat: no-repeat;
     background-size: 25%;
@@ -150,7 +150,7 @@ nav ul li a:hover::after{
 }
 nav i:hover{
     color: white;
-    transform: translateY(-5px)
+    transform: translateY(-3px)
 }
 .typewriter{
     overflow: hidden;
@@ -207,7 +207,7 @@ strong{
 /* ------------------about------------------ */
 #about{
     color: lightgray;
-    height: 97vh;
+    height: 100vh;
 }
 .about-col2 img{
     width: 400px;
@@ -289,11 +289,144 @@ strong{
 }
 /* ------------------portfolio------------------ */
 #projects{
+    height: 100vh;
 }
+.currentproj{
+    margin-top: 2%;
+    border-style: solid;
+}
+.currentproj h2{
+    text-align: center;
+}
+.currproj{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+.currproj h2 {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+.currproj a{
+    width: 600px;
+    height: 300px;
+}
+.currproj img {
+    width: 600px;
+    height: 300px;
+    border-radius: 15px;
+}
+.techstack {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items:center ;
+}
+.techstack img{
+    flex-wrap: wrap;
+    margin: auto;
+    width: 75px;
+    height: auto;
+}
+.previouswork{
+    border-style: solid;
+}
+.previouswork h2{
+    text-align: center;
+}
+.gallery{
+    width:500px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.5s;
+    position: relative;
+}
+.gallery:hover{
+    transform: scale(1.05);
+
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallerywrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+.gallery a{
+    border-radius: 15px;
+    width: 500px;
+    height: 250px;
+}
+.gallery img{
+    border-radius: 15px;
+    width: 500px;
+    height: 250px;
+}
+#backbtn, #forwardbtn{
+    color: lightgray;
+    font-size: 20px;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #21252b;
+}
+#backbtn:hover, #forwardbtn:hover{
+    transform: translateY(-3px);
+    font-weight: bold;
+    color: white;
+}
+#backbtn:active, #forwardbtn:active{
+    transform: translateY(3px);
+    color: lightgray;
+    font-weight: lighter;
+}
+.projdesc{
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.6), black);
+    border-radius: 15px;
+    display: none;
+}
+.projdesc h3{
+    margin: 1% 0px 1% 0px;
+}
+.projdesc p{
+    margin: 0px 1% 0px 1%;
+}
+.gallery:hover .projdesc{
+    display: block;
+}
+/* #projects{
+}
+.currwork h2{
+    margin: 30px;
+    text-align: center;
+}
+.currwork ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.currwork img{
+    width: 100px;
+}
+
 .project-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 100px;
+    grid-gap: 30px;
     margin-top: 30px;
 }
 .project{
@@ -303,7 +436,6 @@ strong{
     overflow: hidden;
     width: 400px;
     height: 500px;
-    /* margin: 10px; */
     border-radius: 15px;
     transition: 0.5s;
 }
@@ -335,13 +467,62 @@ strong{
 .project:hover{
     transform: scale(1.1);
     
-}
+} */
 /* ------------------exposition------------------ */
 #exposition{
     width: 100%;
-    height: 97vh;
 }
-
+.featuredpost{
+    display: flex;
+    height: 400px;
+    margin: 50px;
+}
+.featuredleftcol{
+    width: 50%;
+}
+.featuredleftcol img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.featuredrightcol{
+    margin: 2%;
+    display: block;
+    width: 50%;
+}
+.featuredrightcol sub{
+    display: inline-block;
+}
+.featuredrightcol h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.featuredrightcol p{
+    line-height: 2;
+    margin-bottom: 10px;
+}
+.morearticles {
+    display: flex;
+    justify-content: center;
+}
+.expositionbutton{
+    color: lightgray;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #21252b;
+}
+.expositionbutton:hover{
+    transform: translateY(-3px);
+    font-weight: bold;
+    color: white;
+}
+.expositionbutton:active{
+    transform: translateY(3px);
+    color: lightgray;
+    font-weight: lighter;
+}
 /* ------------------contact------------------ */
 #contact{
     width: 100%;
@@ -363,24 +544,24 @@ strong{
     display: inline-block;
 }
 .contact-first-column .contact-list li:hover{
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     cursor: pointer;
     color: white;
     font-weight: bold;
 }
 .contact-first-column .contact-list a:hover{
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     cursor: pointer;
     color: white;
     font-weight: bold;
 }
 .contact-first-column .contact-list li:active{
-    transform: translateY(5px);
+    transform: translateY(3px);
     color: lightgray;
     font-weight: lighter;
 }
 .contact-first-column .contact-list a:active{
-    transform: translateY(5px);
+    transform: translateY(3px);
     color: lightgray;
     font-weight: lighter;
 }

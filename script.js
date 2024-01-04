@@ -65,3 +65,22 @@ function copytoclipboard(elementId) {
     }, 2000);
 
 }
+
+let scrollContainer = document.querySelector(".gallery");
+let backbtn = document.getElementById("backbtn");
+let forwardbtn = document.getElementById("forwardbtn");
+
+// scrollContainer.addEventListener("wheel", (evt) => {
+//     evt.preventDefault();
+//     scrollContainer.scrollLeft += evt.deltaY;
+// });
+
+backbtn.addEventListener("click", ()=>{
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= 500;
+});
+
+forwardbtn.addEventListener("click", ()=>{
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft += 500;
+});
