@@ -84,3 +84,15 @@ forwardbtn.addEventListener("click", ()=>{
     scrollContainer.style.scrollBehavior = "smooth";
     scrollContainer.scrollLeft += 500;
 });
+
+function hideClass(chosenClass){
+    var menu = document.querySelector(".menu");
+    menu.classList.add("absent");
+
+    var foo = document.querySelector(chosenClass);
+    foo.classList.add("present");
+}
+
+let scrollbackup = new IntersectionObserver(hide);
+
+hide
