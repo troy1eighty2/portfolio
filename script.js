@@ -77,12 +77,12 @@ let forwardbtn = document.getElementById("forwardbtn");
 
 backbtn.addEventListener("click", ()=>{
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft -= 500;
+    scrollContainer.scrollLeft -= 600;
 });
 
 forwardbtn.addEventListener("click", ()=>{
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += 500;
+    scrollContainer.scrollLeft += 600;
 });
 
 function hideClass(chosenClass){

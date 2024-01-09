@@ -290,56 +290,37 @@ strong{
 }
 /* ------------------portfolio------------------ */
 #projects{
-    height: 100vh;
 }
-.currentproj{
-    margin-top: 2%;
-    /* border-style: solid; */
-}
-.currentproj h2{
+.previouswork{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
     text-align: center;
-}
-.currproj{
-    display: flex;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    justify-content: center;
-}
-.currproj h2 {
-    display: flex;
-    width: 300px;
     align-items: center;
-    justify-content: center;
 }
-.currproj a{
-    width: 600px;
-    height: 300px;
+.workcol1{
+    width: 40%;
 }
-.currproj img {
-    width: 600px;
-    height: 300px;
-    border-radius: 15px;
+.workcol1 h2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    font-weight: bolder;
 }
 .techstack {
     display: flex;
-    width: 300px;
-    flex-direction: column;
-    align-items:center ;
+    flex-wrap: wrap;
+    border-style:solid;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
 }
 .techstack img{
-    flex-wrap: wrap;
-    margin: auto;
-    width: 75px;
-    height: auto;
-}
-.previouswork{
-    /* border-style: solid; */
-}
-.previouswork h2{
-    text-align: center;
+    width: 100px;
 }
 .gallery{
-    width:500px;
+    width:600px;
     display: flex;
     overflow: hidden;
     border-radius: 15px;
@@ -357,17 +338,15 @@ strong{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2%;
 }
 .gallery a{
     border-radius: 15px;
-    width: 500px;
-    height: 250px;
+    width: 600px;
 }
 .gallery img{
     border-radius: 15px;
-    width: 500px;
-    height: 250px;
+    width: 600px;
+    border-style: solid;
 }
 #backbtn, #forwardbtn{
     color: lightgray;
@@ -390,26 +369,64 @@ strong{
     color: lightgray;
     font-weight: lighter;
 }
-.projdesc{
-    top: 0;
+.projectlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Adjust the gap between items as needed */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.project {
+    background-color: #e0e0e0;
     text-align: center;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s;
+}
+.project img{
+    width: 100%;
+    border-radius: 15px;
+}
+.projlayer{
+    background: linear-gradient(rgba(0,0,0,0.6), black);
     width: 100%;
     height: 100%;
-    border-radius: 15px;
-    position: absolute;
-    background: linear-gradient(rgba(0,0,0,0.6), black);
-    border-radius: 15px;
     display: none;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-style: solid;
+    border-radius: 15px;
 }
-.projdesc h3{
-    margin: 1% 0px 1% 0px;
+.project:hover .projlayer{
+    display: inline-block;
 }
-.projdesc p{
-    margin: 0px 1% 0px 1%;
+.project:hover{
+    transform: scale(1.1);
+    display: flex;
 }
-.gallery:hover .projdesc{
-    display: block;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Display one column on smaller screens */
+    }
 }
+/* .projectlist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.project{
+    width: 300px;
+    
+}
+.project img{
+    width: 300px;
+    height: 300px;
+} */
 /* #projects{
 }
 .currwork h2{
