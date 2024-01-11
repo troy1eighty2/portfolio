@@ -346,7 +346,6 @@ strong{
 .gallery img{
     border-radius: 15px;
     width: 600px;
-    border-style: solid;
 }
 #backbtn, #forwardbtn{
     color: lightgray;
@@ -377,6 +376,8 @@ strong{
     margin-bottom: 30px;
 }
 .project {
+    width: 350px;
+    height: 400px;
     background-color: #e0e0e0;
     text-align: center;
     position: relative;
@@ -385,11 +386,14 @@ strong{
     transition: .5s;
 }
 .project img{
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: left;
     border-radius: 15px;
 }
 .projlayer{
-    background: linear-gradient(rgba(0,0,0,0.6), black);
+    background: linear-gradient(rgba(0,0,0,0.8), black);
     width: 100%;
     height: 100%;
     display: none;
@@ -401,8 +405,13 @@ strong{
     border-style: solid;
     border-radius: 15px;
 }
+.projlayer p{
+    line-height: 2;
+    margin-top: 30px;
+}
 .project:hover .projlayer{
     display: inline-block;
+    cursor: pointer;
 }
 .project:hover{
     transform: scale(1.1);
