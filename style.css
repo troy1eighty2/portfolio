@@ -190,7 +190,6 @@ strong{
 .links-bar{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -198,7 +197,7 @@ strong{
     width: 100px;
 }
 .links-bar a{
-    margin-right: 100px;
+    margin-right: 10%;
     /* transitions go into base element, so any subsequent transform is animated with .5s length of time */
     transition: .5s;
 }
@@ -682,15 +681,12 @@ footer ul{
     display: block;
 }
 /* -------------------------------------media queries--------------------------------------------- */
-@media screen and (max-width: 1023px){
-    nav i{
-        font-size: 20px;
+@media screen and (max-width: 1025px){
+    nav {
+        display: none;
     }
     nav ul li a{
         font-size: 10px;
-    }
-    #header {
-        background-image: none;
     }
     .links-bar img{
         width: 50px;
@@ -702,10 +698,101 @@ footer ul{
     .contact-second-column img{
         width: 100px;
     }
-    .postcol2{
-        display: none;
+    .postcol1 h2{
+        font-size: smaller;
+    }
+    .postcol1 p{
+        font-size: smaller;
+        line-height: 1;
     }
     .article iframe{
+        width: 100%;
+    }
+    .featuredrightcol sub{
+        display: inline-block;
+    }
+    .featuredrightcol h2{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .featuredrightcol p{
+        line-height: 2;
+        margin-bottom: 10px;
+        font-size: smaller;
+    }
+}
+@media screen and (max-width: 431px){
+    h1{
+        font-size: small;
+    }
+    p {
+        font-size: small;
+        line-height: 1;
+    }
+    #header{
+        background-image: url(images/800px-JJASBR_Weather_Artwork.png);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: 90% 80%;
+    }
+    #header h1 {
+        font-size: smaller;
+    }
+    #header p {
+        font-size: small;
+    }
+    #about p {
+        line-height: 2;
+    }
+    .about-col1{
+        width: 100%;
+    }
+    .links-bar a{
+        justify-content: space-between;
+    }
+    .links-bar img{
+        width: 75px;
+    }
+    .troylink img{
+        width: 30px;    
+    }
+    .previouswork{
+        flex-direction: column;
+    }
+    .gallery{
+        height: 100px;
+    }
+    .techstack img{
+        width: 50px;
+    }
+    .projectlist a{
+        width: 200px;
+    }
+    .project{
+        width: 200px;
+    }
+    .featuredrightcol h2{
+        font-size: smaller;
+    }
+    .featuredrightcol p {
+        line-height: 1;
+    }
+    .contact-list li{
+        font-size: small;
+    }
+    .credits p {
+        font-size: small;
+    } 
+    .contact-second-column{
+        display: none;
+    }
+    .featuredpost{
+        flex-direction: column;
+    }
+    .featuredrightcol{
+        width: 100%;
+    }
+    .featuredleftcol{
         width: 100%;
     }
 }
