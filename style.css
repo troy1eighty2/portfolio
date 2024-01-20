@@ -300,9 +300,6 @@ strong{
     text-align: center;
     align-items: center;
 }
-.workcol1{
-    width: 40%;
-}
 .workcol1 h2{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -365,11 +362,11 @@ strong{
     font-weight: bold;
     color: white;
 }
-#backbtn:active, #forwardbtn:active{
+/* #backbtn:active, #forwardbtn:active{
     transform: translateY(3px);
     color: lightgray;
     font-weight: lighter;
-}
+} */
 .projectlist {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -418,12 +415,6 @@ strong{
 .project:hover{
     transform: scale(1.1);
     display: flex;
-}
-/* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Display one column on smaller screens */
-    }
 }
 
 /* ------------------exposition------------------ */
@@ -475,11 +466,11 @@ strong{
     font-weight: bold;
     color: white;
 }
-.expositionbutton:active{
+/* .expositionbutton:active{
     transform: translateY(3px);
     color: lightgray;
     font-weight: lighter;
-}
+} */
 /* ------------------contact------------------ */
 #contact{
     width: 100%;
@@ -512,7 +503,7 @@ strong{
     color: white;
     font-weight: bold;
 }
-.contact-first-column .contact-list li:active{
+/* .contact-first-column .contact-list li:active{
     transform: translateY(3px);
     color: lightgray;
     font-weight: lighter;
@@ -521,7 +512,7 @@ strong{
     transform: translateY(3px);
     color: lightgray;
     font-weight: lighter;
-}
+} */
 .cpysuccess{
     display: none;
     position: absolute;
@@ -760,16 +751,39 @@ footer ul{
         flex-direction: column;
     }
     .gallery{
-        height: 100px;
+        width: 200px;
+    }
+    .gallery a{
+        width: 200px;
+    }
+    .gallery img{
+        width: 200px;
+    }
+    #backbtn, #forwardbtn{
+        margin: 5px;
     }
     .techstack img{
         width: 50px;
     }
     .projectlist a{
         width: 200px;
+        height: 200px;
     }
     .project{
         width: 200px;
+        height: 200px;
+    }
+    .project img{
+        width: 100%;
+    }
+    .projlayer{
+        font-size: small;
+        width: 100%;
+    }
+    .projlayer p{
+        margin-top: 10px;
+        line-height: 1.5;
+        font-size: x-small;
     }
     .featuredrightcol h2{
         font-size: smaller;
@@ -777,12 +791,19 @@ footer ul{
     .featuredrightcol p {
         line-height: 1;
     }
-    .contact-list li{
-        font-size: small;
-    }
     .credits p {
-        font-size: small;
+        font-size: xx-small;
     } 
+
+    .contact-first-column{
+        display: flex;
+    }
+    .contact-first-column .contact-list li{
+        padding: 10px;
+    }
+    .contact-list {
+        font-size: xx-small;
+    }
     .contact-second-column{
         display: none;
     }
