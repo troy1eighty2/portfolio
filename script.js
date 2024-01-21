@@ -93,6 +93,9 @@ function hideClass(chosenClass){
     foo.classList.add("present");
 }
 
-let scrollbackup = new IntersectionObserver(hide);
 
-hide
+function navigate(postrequest){
+    window.location.href = "exposition.html?" + encodeURIComponent(postrequest);
+    
+}
+
