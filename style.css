@@ -571,6 +571,11 @@ footer ul{
 }
 /* ------------------footer------------------ */
 /* ------------------exposition-------------- */
+a{
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
 #expositionheader{
     width: 100%;
     background-repeat: no-repeat;
@@ -600,12 +605,12 @@ footer ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
-    padding:10px;
+    padding:30px;
     background: #21252b;
     border-radius: 15px;
     transition: .5s;
     margin-bottom: 30px;
+    gap: 30px;
 }
 .post img{
     width: 200px;
@@ -618,6 +623,8 @@ footer ul{
 }
 .article{
     display: none;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .articleseparator{
     margin-top: 30px;
@@ -646,6 +653,10 @@ footer ul{
     font-weight:normal;
     transform: translateY(3px);
 }
+.articlebody{
+    display: flex;
+    flex-direction: column;
+}
 .articlebody p{
     line-height: 2;
     text-indent: 50px;
@@ -663,6 +674,8 @@ footer ul{
 }
 .article img{
     margin-bottom: 30px;
+    width: 100%;
+
 }
 .absent{
     display: none;
