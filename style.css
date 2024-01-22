@@ -571,11 +571,7 @@ footer ul{
 }
 /* ------------------footer------------------ */
 /* ------------------exposition-------------- */
-a{
-    color: inherit;
-    text-decoration: underline;
-    cursor: pointer;
-}
+
 #expositionheader{
     width: 100%;
     background-repeat: no-repeat;
@@ -653,11 +649,22 @@ a{
     font-weight:normal;
     transform: translateY(3px);
 }
+sub {
+    margin-top: 30px;
+    display: block;
+}
+
 .articlebody{
     display: flex;
     flex-direction: column;
 }
-.articlebody p{
+.articlebody a{
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.article p, .articleseparator p{
+    font-size: medium;
     line-height: 2;
     text-indent: 50px;
     margin-bottom: 30px;
@@ -685,12 +692,6 @@ a{
 }
 /* -------------------------------------media queries--------------------------------------------- */
 @media screen and (max-width: 1025px){
-    nav {
-        display: none;
-    }
-    .navbreak{
-        display: none;
-    }
     nav ul li a{
         font-size: 10px;
     }
@@ -708,8 +709,11 @@ a{
         font-size: smaller;
     }
     .postcol1 p{
-        font-size: smaller;
+        font-size: xx-small;
         line-height: 1.5;
+    }
+    .postcol2 img{
+        display: none;
     }
     .article iframe{
         width: 100%;
@@ -729,14 +733,23 @@ a{
     .post img{
         width: 100px;
     }
+    .article{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .article p, .articleseparator p{
+        font-size: small;
+        line-height: 2;
+        text-indent: 50px;
+        margin-bottom: 30px;
+    }
 }
 @media screen and (max-width: 431px){
-    h1{
-        font-size: small;
+    nav{
+        display: none;
     }
-    p {
-        font-size: small;
-        line-height: 1;
+    .navbreak{
+        display: none;
     }
     #header{
         background-image: url(images/800px-JJASBR_Weather_Artwork.png);
