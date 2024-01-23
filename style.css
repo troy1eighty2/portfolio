@@ -299,6 +299,10 @@ strong{
     text-align: center;
     align-items: center;
 }
+.previous-work-title{
+    text-align: center;
+    align-content: center;
+}
 .workcol1 h2{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -680,8 +684,15 @@ sub {
     display: block;
     background-color: #21252b;
 }
-.articlebody img, .articlebody iframe{
+.articlebody img{
     width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+    align-self: center;
+}
+.articlebody iframe{
+    width: 50%;
+    height: 300px;
     margin-bottom: 30px;
     align-self: center;
 }
