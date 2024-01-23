@@ -633,6 +633,10 @@ footer ul{
     margin-bottom: 30px;
     font-size: small;
 }
+.articleseparator img{
+    margin-bottom: 30px;
+    width: 100%;
+}
 .bckbtn{
     display: inline-block;
     border-radius: 15px;
@@ -672,17 +676,14 @@ sub {
 .articlebody h2{
     margin-bottom: 30px;
 }
-.articlebody iframe{
-    margin-bottom: 30px;
-}
 .article code{
     display: block;
     background-color: #21252b;
 }
-.article img{
+.articlebody img, .articlebody iframe{
+    width: 50%;
     margin-bottom: 30px;
-    width: 100%;
-
+    align-self: center;
 }
 .absent{
     display: none;
