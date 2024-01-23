@@ -780,6 +780,7 @@ sub {
     }
     .about-col1{
         width: 100%;
+        font-size: small;
     }
     .links-bar a{
         justify-content: space-between;
@@ -834,7 +835,7 @@ sub {
         line-height: 1;
     }
     .credits p {
-        font-size: xx-small;
+        font-size: small;
     } 
 
     .contact-first-column{
@@ -845,7 +846,7 @@ sub {
         padding: 10px;
     }
     .contact-list {
-        font-size: xx-small;
+        font-size: small;
     }
     .contact-second-column{
         display: none;
