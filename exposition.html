@@ -56,7 +56,22 @@
                                 <sub>01/20/2024</sub>
                             </div>
                             <div class="postcol2">
-                                <img src="blog/eportfolio.jpg" alt="">
+                                <img src="blog/eportfolioblog/eportfolio.jpg" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li onclick="hideClass('.twosum')">
+                        <div class="post">
+                            <div class="postcol1">
+                                <h2>Leetcode Easy: 1.) Two Sum</h2>
+                                <p>
+                                    The first problem on the popular data structures and algorithms practice site, Leetcode. There are many approaches to this problem but I want to explore a really 
+                                    simple way to solve it using a hashmap.
+                                </p>
+                                <sub>01/20/2024</sub>
+                            </div>
+                            <div class="postcol2">
+                                <img src="blog/twosumblog/twosumcover.png" alt="">
                             </div>
                         </div>
                     </li>
@@ -100,7 +115,7 @@
                         I decided to create a personal website. I made it so I have a place to redirect people to all my social media and ecommerce links as well as to document random stuff 
                         that I have done throughout my career as an engineer. 
                     </p>
-                    <img src="blog/eportfolio.jpg" alt="">
+                    <img src="blog/eportfolioblog/eportfolio.jpg" alt="">
                     <hr>
                 </div>
                 <div class="articlebody">
@@ -114,7 +129,7 @@
                         their profiles and what everyone was up to. I was also greatly inspired by people like <em>Bruno Simon</em> with his <a href="https://bruno-simon.com/" target="_blank"> 3js interactive driving sim e-portfolio</a>
                         or <em>Steve Losh</em> with his "gets the job done" minimalistic but memorable <a href="https://stevelosh.com/" target="_blank">e-blog.</a>
                     </p>
-                    <img src="blog/brunosimonportfolio.jpg">
+                    <img src="blog/eportfolioblog/brunosimonportfolio.jpg">
                     <p>
                         I learned the basics of web development on <a href="https://developer.mozilla.org/en-US/" target="_blank">mdn web docs</a>, bless Mozilla. Their documentation is so easy to 
                         read and understand that even a noob like me quickly grasped the essential concepts of the box model and html structures (Although to be fair, html isn't exactly the hardest 
@@ -128,6 +143,68 @@
                         React build. Creating these articles is also a nightmare because the entire blog was hardcoded so I want to eventually replace it with a CMS or maybe just improve the whole process 
                         of writing and managing articles with a database, since I did take that class last semester. For now, it serves its purpose. I guess. LOL. Expect lifting and tech related content in 
                         the future.
+                    </p>
+                    <p> - Troy</p>
+                </div>
+                <div class="articleseparator">
+                    <a href="exposition.html"><sub class="bckbtn"><-back</sub></a>
+                </div>
+            </div>
+            <div class="article twosum">
+                <div class="articleseparator">
+                    <a href="exposition.html"><sub class="bckbtn"><-back</sub></a>
+                    <sub >01/24/2024</sub>
+                    <h1>Leetcode Easy: 1.) Two Sum</h1>
+                    <p>The first problem on the popular data structures and algorithms practice site, Leetcode. There are many approaches to this problem but I want to explore a really simple way to solve it using a hashmap.</p>
+                    <img src="blog/twosumblog/twosumcover.png" alt="">
+                    <hr>
+                </div>
+                <div class="articlebody">
+                    <h2>Problem</h2>
+                    <p>We are given a list of nums integers and asked to return the indices corresponding to 2 integers in the nums list that add up to a target value. We have been told that there is only one solution to the 
+                        problem to simplify it. We want to iterate through the list, keeping track of each element and its index. We can do this with either <a href="https://www.geeksforgeeks.org/enumerate-in-python/" target="_blank">enumerate</a> 
+                        or a for loop that iterates over the length of the nums list. 
+                    </p>
+                    <p>
+                        With the for loop, we have access to each value in the list and realize that by subtracting this value from the given target, we get the second 
+                        number required to have two numbers that sum up to the given target because addition and subtraction are inverse operations. 
+                    </p>
+                    <p>
+                        We can move onto the next value if the two values calculated are not our target, but we want to add the processed value to our dict with the 
+                        value as the key and the index of that value as the value.
+                    </p>
+                    <img src="blog/twosumblog/twosumexample.png">
+                    <p>
+                        Here, we can see that our for loop processes the first item in the nums array, which is a 2, and checks if its pair is already discovered and placed into the dict. If it hasn't discovered its pair, it 
+                        makes a new dict item with "2" being the key and "0" being the value and moves on to the next iteration. In the second iteration, it has discovered that the pair exists in dict, so the code will return 
+                        the index of the nums value it is currently processesing and use "target - nums[i]" as a key to the dict to find its pair and return the pair's index.
+                    </p>
+                    <h2>Methodologies</h2>
+                    <code>
+                        for i, n in enumerate(nums):
+                    </code>
+                    <p>i will be the value of the index and n will be the value at nums[i]</p>
+                    <code>
+                        for i in range(len(nums)):
+                    </code>
+                    <p>i will be the value of the index of n</p>
+                    <img src="blog/twosumblog/twosum1.png">
+                    <p>The heart of the problem: if the pair of n is already in dict, then return the indice of n and use the pair of n as the key to get the pair of n's index and return it.</p>
+                    <h2>Time Complexity / Space Complexity</h2>
+                    <p>
+                        We only have to traverse through the given nums array once, which can take as long as the length of nums. Finding the value of hash items with a key is a O(1) operation, so the time complexity is O(N).
+                    </p>
+                    <p>
+                        We need to create a dict that has the possibility of being as long as our given nums array, so the space complexity is O(N).
+                    </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/s6FmvJN0fkE?si=o9_iJ9Nh5avH7zk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>
+                        This is considered the easiest Leetcode problem, but I actually think this one is a head scratcher if you are trying to solve it in O(N) time. People will intuitively try to brute force the problem, which 
+                        will result in a terrible TC. I use this problem to practice things for the first time, like a new algorithms platform or video format or even a blog article.
+                    </p>
+                    <p>
+                        This is the first problem I solved and made a blog for. I have discovered a few issues, especially with making code blocks in html, so I need to go fix those things. I want to also do problems in a more 
+                        step by step manner. I also need to figure out a good setup for my file system so that things are well organized.
                     </p>
                     <p> - Troy</p>
                 </div>

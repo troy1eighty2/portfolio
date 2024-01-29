@@ -671,6 +671,10 @@ sub {
     text-decoration: underline;
     cursor: pointer;
 }
+.articlebody a:hover{
+    font-weight: bold;
+    color: white;
+}
 .article p, .articleseparator p{
     font-size: medium;
     line-height: 2;
@@ -683,6 +687,8 @@ sub {
 .article code{
     display: block;
     background-color: #21252b;
+}
+.article pre{
 }
 .articlebody img{
     width: 50%;
