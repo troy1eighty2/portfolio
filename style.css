@@ -685,16 +685,25 @@ sub {
     margin-bottom: 30px;
 }
 .article code{
-    display: block;
     background-color: #21252b;
-}
-.article pre{
 }
 .articlebody img{
     width: 50%;
-    height: auto;
     margin-bottom: 30px;
     align-self: center;
+}
+.codeBlock{
+    white-space: pre-line;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+.imageRow{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.imageRow img{
+    width: 30%;
 }
 .articlebody iframe{
     width: 50%;
@@ -760,6 +769,9 @@ sub {
         line-height: 2;
         text-indent: 50px;
         margin-bottom: 30px;
+    }
+    .article pre code{
+        font-size: small;
     }
 }
 @media screen and (max-width: 431px){
@@ -868,5 +880,8 @@ sub {
     }
     .index{
         margin: 0;
+    }
+    .article pre code{
+        font-size: xx-small;
     }
 }
